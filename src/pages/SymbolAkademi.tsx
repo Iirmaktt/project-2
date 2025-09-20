@@ -3,51 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, GraduationCap, BookOpen, Users, Award, Clock, CheckCircle } from 'lucide-react';
 
 const SymbolAkademi: React.FC = () => {
-  const courses = [
-    {
-      title: "Temel Kaynak Eğitimi",
-      description: "Kaynak teknolojilerine giriş ve temel beceriler",
-      duration: "40 Saat",
-      level: "Başlangıç",
-      features: [
-        "Kaynak güvenliği ve iş sağlığı",
-        "Temel kaynak yöntemleri",
-        "Malzeme bilgisi",
-        "Pratik uygulamalar"
-      ],
-      icon: <BookOpen className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg"
-    },
-    {
-      title: "İleri Seviye Kaynak Teknikleri",
-      description: "Uzman seviye kaynak uygulamaları ve özel teknikler",
-      duration: "80 Saat",
-      level: "İleri",
-      features: [
-        "TIG ve MIG/MAG ileri teknikleri",
-        "Özel alaşım kaynağı",
-        "Kaynak hatası analizi",
-        "Kalite kontrol yöntemleri"
-      ],
-      icon: <Award className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg"
-    },
-    {
-      title: "Kaynak Güvenliği ve Standartları",
-      description: "İş güvenliği ve uluslararası kaynak standartları",
-      duration: "24 Saat",
-      level: "Tüm Seviyeler",
-      features: [
-        "İş güvenliği mevzuatı",
-        "Kişisel koruyucu donanım",
-        "Risk analizi ve önlemleri",
-        "Acil durum prosedürleri"
-      ],
-      icon: <CheckCircle className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg"
-    }
-  ];
-
   const trainingPrograms = [
     {
       title: "Bireysel Eğitim Programları",
@@ -155,92 +110,8 @@ const SymbolAkademi: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Courses */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Eğitim <span className="text-blue-800">Programlarımız</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Teorik bilgi ile pratik uygulamayı harmanlayan kapsamlı eğitim programları
-            </p>
-          </div>
-
-          <div className="space-y-16">
-            {courses.map((course, index) => (
-              <div 
-                key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
-              >
-                {/* Image */}
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''} relative group`}>
-                  <div className="overflow-hidden rounded-xl shadow-2xl">
-                    <img 
-                      src={course.image}
-                      alt={course.title}
-                      className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  </div>
-                  <div className="absolute top-6 left-6 bg-blue-600 text-white p-3 rounded-full">
-                    {course.icon}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="bg-white p-8 rounded-xl shadow-lg">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {course.level}
-                      </span>
-                      <span className="flex items-center text-gray-600">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {course.duration}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                      {course.title}
-                    </h3>
-                    <p className="text-lg text-blue-800 mb-6 font-medium">
-                      {course.description}
-                    </p>
-                    
-                    <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                        Eğitim İçeriği:
-                      </h4>
-                      <ul className="space-y-2">
-                        {course.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start text-gray-700">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center px-6 py-3 bg-blue-800 text-white font-semibold rounded-lg hover:bg-blue-900 transform hover:scale-105 transition-all duration-300"
-                    >
-                      Kayıt Ol
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Training Programs */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -281,7 +152,7 @@ const SymbolAkademi: React.FC = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -325,7 +196,7 @@ const SymbolAkademi: React.FC = () => {
       </section>
 
       {/* Facilities */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
