@@ -68,13 +68,13 @@ const setIsScrolled=(...args)=>{};
       ]
     },
     { 
-      name: 'Hizmetler', 
-      path: '/services', 
+      name: 'Hizmetler',
+      path: '/services',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Danışmanlık Hizmetleri', path: '/services', sectionId: 'danismanlik-hizmetleri' },
-        { name: 'Kaynak Hizmetleri', path: '/services', sectionId: 'kaynak-hizmetleri' },
-        { name: 'Symbol Akademi', path: '/services', sectionId: 'symbol-akademi' }
+        { name: 'Danışmanlık', path: '/danismanlik' },
+        { name: 'Kaynak Hizmetleri', path: '/kaynak-hizmetleri' },
+        { name: 'Symbol Akademi', path: '/symbol-akademi' }
       ]
     },
     { name: 'Haberler', path: '/news' },
